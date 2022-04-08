@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 import { Form } from './components/Form';
 import styled from 'styled-components';
+import remarkGfm from 'remark-gfm';
 
 
 const FormContainer = styled.div`
@@ -25,14 +26,30 @@ const LeftSide = styled.div`
   border-radius: 4px;
 `
 
+const LeftSideContainer = styled.div`
+  text-align: center;
+`
+
 const defaultTemplate = `
-  # This is a Title
+# This is a Title
 
   * This is a list item
   * This is another list item
   
   ## This is a h2 tag
   ### This is a h3 tag
+  Have to put two spaces in front of text to  
+  make a newline  
+
+  *This is italics*  
+  **This is bold**  
+  ~~strikethrough~~
+
+
+
+   [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+
+
 `
 
 function App() {
@@ -42,12 +59,12 @@ function App() {
       <RightSide>
         <Form value={markdown} setMarkDown={setMarkDown}/>
       </RightSide>
-      <div style={{textAlign: "center"}}>
-        <h1>Preview Screen</h1>
+      <LeftSideContainer>
+        <h1 style={{backgroundColor: "lightgrey", padding: "20px", borderRadius: "5px", boxShadow: "0 2px 5px black"}}>Preview Screen</h1>
         <LeftSide>
-          <ReactMarkdown>{markdown}</ReactMarkdown>  
+          <ReactMarkdown remarkPlugins={remarkGfm}>{markdown}</ReactMarkdown>  
         </LeftSide>
-      </div>
+      </LeftSideContainer>
     </FormContainer>
   )
 }
