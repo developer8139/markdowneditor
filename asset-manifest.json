@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/markdowneditor.github.io/static/css/main.964fdded.css",
+    "main.js": "/markdowneditor.github.io/static/js/main.97963303.js",
+    "static/js/787.e6279602.chunk.js": "/markdowneditor.github.io/static/js/787.e6279602.chunk.js",
+    "index.html": "/markdowneditor.github.io/index.html",
+    "main.964fdded.css.map": "/markdowneditor.github.io/static/css/main.964fdded.css.map",
+    "main.97963303.js.map": "/markdowneditor.github.io/static/js/main.97963303.js.map",
+    "787.e6279602.chunk.js.map": "/markdowneditor.github.io/static/js/787.e6279602.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.97963303.js"
+  ]
+}
